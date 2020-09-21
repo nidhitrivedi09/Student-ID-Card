@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kim Tran's porfolio</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<div class="wrapper">
+
+  <!-- Header section -->
+  <div class="container-fluid">
+    <header class="main-header">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#intro">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#gallery">Kim's Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="logo"><img src="http://www.kimhieutran.com/img/header.png" alt="" class=""></div>
+      <h1>kim<span>tran</span></h1>
+      <h3 class="banner">Web designer and developer</h3>
+    </header>
+  </div>
+
+  <!-- Introduction -->
+  <div class="container">
+    <section id="intro">
+      <!-- <h2>Intro</h2> -->
+      <blockquote class="quote-box">
+        <p class="quote-text"><span class="quotemarkstart">“</span> — Based out of Espoo,Finland. Specializing in web design and web development. If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me <a href="#contact">here</a>.
+          <span
+            class="quotemarkend">”</span>
+        </p>
+      </blockquote>
+
+      <a class="abouta">About</a>
+      <a class="whatidoa">What I do</a>
+      <div class="about clearfix">
+        <p>I've always been drawn to the overlap between *design and development. My *skills are broad: from ux to design, front end to back end development. I enjoy each aspect, and love building sites &amp; mobile apps from start to finish, for clients
+          all over the world.</p>
+
+        <p>I'm available for remote work - if you would like to build something together, get in touch?</p>
+      </div>
+      <div class="whatido clearfix">
+        <p>
+          <dl>Front-end</dl>
+          <dd>CSS3, Javascript, ES6, React,</dd>
+          <dt>Back-end</dt>
+          <dd>NodeJS, PHP</dd>
+          <dt>CMS</dt>
+          <dd>Drupal, Wordpress</dd>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Works -->
+
+  <section id="works">
+    <h2>Recent works</h2>
+    <p class="description">Here's a selection of some recent work. For more up to the minute work you can visit me on my social network </p>
+    <div class="work-container">
+      <div class="cards ivivu">
+        <div class="item">
+          <img src="http://www.kimhieutran.com/img/works/ivivu.png" alt="">
+          <h3>iVivu</h3>
+          <h4>Project Manager</h4>
+          <p>iVivu is a joint venture that offers a hotel management system for smart hotels in Vietnam. I am responsible for leading the project of analyzing and renovating the company website</p>
+        </div>
+
+      </div>
+      <div class="cards foodnstuffs">
+        <div class="item">
+          <img src="http://www.kimhieutran.com/img/works/foodnstuffs.png" alt="">
+          <h3>foodnstuffs</h3>
+          <h4>Front-end developer | Web designer</h4>
+          <p>web-based application, called Food ‘n’ Stuff which aims at creating shopping list according to the recipes, adding or removing foodstuff items and many different kinds of features for home cook and amateurs.
+          </p>
+          <p class="work-link"><a href="https://github.com/trinhphandinhhuy/FoodApp">Github</a> | <a href="http://foodandstuff.azurewebsites.net/">Website</a></p>
+        </div>
+
+      </div>
+      <div class="cards customerWisdom">
+        <div class="item">
+          <img src="http://www.kimhieutran.com/img/works/asiakasviisaus.png" alt="">
+          <h3>Asiakasviisaus</h3>
+          <h4>Project Manager | Front-end developer</h4>
+          <p>I am part of a team building website for digiMensa project of Lappeenranta University of Technology and Lahti University of Applied Sciences</p>
+        </div>
+
+      </div>
+      <div class="cards ICTProjectAcademy">
+        <div class="item">
+          <img src="http://www.kimhieutran.com/img/works/foodnstuffs.png" alt="">
+          <h3>ICTProjectAcademy</h3>
+          <h4>Front-end developer</h4>
+          <p>web-based internal portal for LAMK BIT department, called ICTProjectAcademy (now ICTProjectMaster) which introduces student’s projects, and includes a number of different features for BIT teachers and students</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Article -->
+  <!-- <div class="container">
+		<section id="articles">
+			<h2>Articles</h2>
+			<article>
+				<h3>Tittle for article</h3>
+				<p>lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+				<h3>Tittle for article</h3>
+				<p>lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+				<h3>Tittle for article</h3>
+				<p>lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+			</article>
+		</section>
+	</div> 
+	<div class="container">
+		<section id="articles">
+			<h2>Articles</h2>
+			<article>
+				<?php
+					global $post;
+					$args = array( 'posts_per_page' => 3 );
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ) :	setup_postdata($post);
+				?>
+				<div class="article">
+					<a href="<?php the_permalink() ?>">
+						<div class="blogs">
+							<h4><?php the_title(); ?></h4>
+							<p style="text-align:center;font-size:.75em;"><?php the_date(); ?></p>
+							<?php the_excerpt(); ?>
+						</div>
+					</a>
+				</div>
+				<?php endforeach; ?>
+			</article>
+		</section>
+	</div>
+-->
+  <!-- Contact -->
+  <div class="container-fluid" id="contact">
+    <section>
+      <h2>Contact</h2>
+      <p class="text-center">Let's build something together! Or <a href="mailto:trankimhieu1991@gmail.com">email me</a> if you have any other questions.</p>
+      <div class="col-xs-12 col-md-6 col-lg-8">
+      <form id="contactForm" novalidate="">
+        <div class="form-item">
+          <label for="“name”">Name</label>
+          <input id="name" type="text" placeholder="Name" required=""/>
+        </div>
+        <div class="form-item">
+          <label for="“email”">Email Address</label>
+          <input id="email" type="email" placeholder="Email Address" required=""/>
+        </div>
+        <div class="form-item">
+          <label for="“phone”">Phone Number</label>
+          <input id="phone" type="tel" placeholder="Phone Number" required=""/>
+        </div>
+        <div class="form-item">
+          <label for="“message”">Message</label>
+          <textarea id="message" rows="5" placeholder="Message" required=""></textarea>
+        </div><br/>
+        <button type="submit">Send</button>
+      </form>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-4">
+        <p>Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for a coffee here in Helsinki... just feel free to drop me a line anytime.</p>
+        <p>I promise to reply A.S.A.P.</p>
+        <p>Note: No spam :)</p>
+    </div>
+    </section>
+  </div>
+
+  <!-- footer -->
+  <div id="footer" class="container-fluid">
+    <footer>
+      <div>
+        <ul>
+          <li><a class="button social" href="https://fi.linkedin.com/in/kimtran1991"><i class="fa fa-fw fa-linkedin"></i></a></li>
+          <li><a class="button social" href="https://github.com/tranki1"><i class="fa fa-fw fa-github"></i></a></li>
+          <li><a class="button social" href="https://facebook.com/kimtran2303"><i class="fa fa-fw fa-facebook"></i></a></li>
+          <li><a class="button social" href="https://www.instagram.com/kimhieu.tran" title="My Flickr"><i class="fa fa-fw fa-instagram"></i></a></li>
+        </ul>
+    </div>
+      <p>&copy;kimtran 2018. All Rights Reversed</p>
+    </footer>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/animation.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  
+</body>
+
+</html>
+
+
